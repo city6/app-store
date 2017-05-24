@@ -6,3 +6,7 @@
 
 安卓跳转到 腾讯应用宝番淘
 
+### License
+
+MIT By Julian
+
