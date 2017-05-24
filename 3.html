@@ -2,10 +2,23 @@
 <html lang="en">
 
 <head>
-  <title></title>
+  <title>番淘-海外华人淘日本</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <style>
+    body {
+      display: none
+    }
+  </style>
+  <script>
+    function isAndroid() {
+      var u = navigator.userAgent;
+      if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+        return true;
+      }
+      return false;
+    }
+  </script>
 </head>
 
 <body>
@@ -16,6 +29,9 @@
 <script>
   var iframe = document.createElement('iframe');
   var ulr = "https://itunes.apple.com/cn/app/%E7%95%AA%E6%B7%98-%E6%B5%B7%E5%A4%96%E5%8D%8E%E4%BA%BA%E6%B7%98%E6%97%A5%E6%9C%AC/id1237144051?mt=8"
+  if (isAndroid()) {
+    ulr = "http://sj.qq.com/myapp/detail.htm?apkName=com.panli.android.pantao";
+  }
   iframe.src = ulr;
   document.body.appendChild(iframe);
 </script>
